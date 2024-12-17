@@ -1,0 +1,37 @@
+{
+  "name": "pkg6/db-settings",
+  "description": "Store PHP application settings in the database.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "zhiqiang",
+      "email": "zhiqiang2033@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">7.4",
+    "psr/simple-cache": "^1.0|^2.0|^3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pkg6\\DB\\Settings\\": "src/"
+    }
+  },
+  "require-dev": {
+    "mockery/mockery": ">=0.9.9",
+    "phpunit/phpunit": "~4.8|~6.0",
+    "friendsofphp/php-cs-fixer": "^3.9",
+    "phpstan/phpstan": "^2.0"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Pkg6\\DB\\Settings\\Test\\": "tests/"
+    }
+  },
+  "scripts": {
+    "fixer": "./vendor/bin/php-cs-fixer fix",
+    "tests": "./vendor/bin/phpunit",
+    "analyse": "./vendor/bin/phpstan analyse src tests"
+  }
+}
